@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SarmaApi</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <h1>SARMA API</h1>
+
+  <% if user_signed_in? %>
+    Welcome <%= current_user.email %><br/>
+    <%= link_to 'Tasks', tasks_path %> | 
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete%>
+  <% else %>
+    <%= link_to 'Login', new_user_session_path%>
+  <% end %>
+
+  <hr/>
+
+  <%= yield %>
+
+</body>
+</html>
