@@ -13,8 +13,11 @@ Rails.application.routes.draw do
   namespace :api do
     resources :sessions, only: [:create, :destroy]
     resources :tasks
+
   end
 
+
+  match '/api/*goblgobl',  to: 'api#no_endpoint', via: :all
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

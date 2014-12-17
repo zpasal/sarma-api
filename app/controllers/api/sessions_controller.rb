@@ -1,4 +1,5 @@
-class Api::SessionsController < ActionController::Base
+class Api::SessionsController < ApiController
+
   def create
     # Find user by Email
     user = User.find_by(email: params[:email])
@@ -9,10 +10,10 @@ class Api::SessionsController < ActionController::Base
       user.update_attributes(api_token: SecureRandom.hex) if !user.api_token
     end
 
-    render json: { api_token: user ? user.api_token : nil }
+    render response: { api_token: user ? user.api_token : nil }
   end
 
-  def destroy
-    # TODO
+  # TODO
+  def destroy    
   end
 end
