@@ -15,7 +15,4 @@ class Api::SessionsController < ApiController
     render response: { api_token: api_token }
   end
 
-  # TODO
-  def destroy    
-  end
 end
