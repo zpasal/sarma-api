@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   end
 
 
-  match '/api/*goblgobl',  to: 'api#no_endpoint', via: :all
+  match '/api/*bullshot',  to: 'api#no_endpoint', via: :all
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
