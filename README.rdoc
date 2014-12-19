@@ -5,5 +5,5 @@ https://docs.google.com/presentation/d/1ChijqecY7oHu1VJHaIoECdE6_xUNAwFSnlUHI0LN
 
 Standard rails app:
 
-rake db:migrate
-rails s
+```rake db:migrate
+rails s```
